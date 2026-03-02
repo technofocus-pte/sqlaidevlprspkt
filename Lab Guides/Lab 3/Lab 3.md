@@ -565,53 +565,7 @@ By the end of this lab, participants will be able to:
 
     ![](./media/image57.png)
 
-## Exercise 10: Expose the Search as a Secure API 
-
-**Goal**: Make the search callable from hospital apps.
-
-1.  Download Data API Builder (latest .exe from +++https://github.com/microsoft/data-api-builder/releases+++)
-
-2.  Extract to C:\DAB
-
-3.  Open Command Prompt and navigate to C:\DAB
-
-4.  Initialize:
-
-    ```
-    dab init --database-type mssql --connection-string 
-    "Server=localhost;Database=ContosoClinicalReports;Trusted_Connection=True;" --rest.path "/api"
-    ```
-
-5.  Edit dab-config.json (or staticwebapps.config.json):
-
-    ```
-    {
-    "data-source": {
-        "database-type": "mssql",
-        "connection-string": "..."
-    },
-    "entities": {
-        "ReportSearch": {
-        "source": "dbo.SearchClinicalReports",
-        "permissions": [{"role": "authenticated", "actions": ["execute"]}],
-        "rest": {
-            "methods": ["GET"],
-            "path": "/report-search"
-        }
-        }
-    }
-    }
-    ```
-
-6.  Start API:
-
-    +++dab start+++
-
-7.  Test in browser/Postman:
-
-+++http://localhost:5000/api/report-search?Query=post-operative%20infection&TopN=3+++
-
-## Exercise 11: Build the Core Search Stored Procedure with SSMS Copilot
+## Exercise 10: Build the Core Search Stored Procedure with SSMS Copilot
 
 **Goal**: Create the semantic search logic — use free SSMS Copilot to
 speed up coding.
@@ -639,5 +593,3 @@ speed up coding.
 ## Conclusion:
 
 By completing this lab, participants have successfully provisioned infrastructure, enabled SQL Server 2025 AI features, generated vector embeddings using Azure OpenAI, implemented semantic search with DiskANN indexing, and secured sensitive patient data using masking and role-based access control. They also exposed the search functionality as a secure REST API for hospital applications. Overall, learners gained practical experience in building an end-to-end AI-powered, privacy-compliant clinical search system that combines database intelligence, cloud AI services, and secure API development into one integrated solution.
-
-
