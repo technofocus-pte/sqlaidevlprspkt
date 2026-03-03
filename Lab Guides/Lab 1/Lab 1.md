@@ -214,8 +214,34 @@ VS Code.
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image33.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image34.png)
+    
+### Exercise 4: Create Storage Container
 
-### Exercise 4: Create Data base and tables
+1. Select Storage accounts.
+
+2. On the Storage center page select **Create**.
+
+3. For the storage account name enter +++sa@lab.labinstance.id+++.
+
+4. Leave everything else default, select **Review + Create**, and select **Create**
+
+5. Wait for the deployment successful and click on **Go to resource**.
+
+6. Expand Data storage, and select **Containers**.
+
+7. Select **+ Add Container**
+
+8. In Name enter +++public+++
+
+9. Select **Create**
+
+10. Select your public container
+
+11. Select upload, browse for files, and in Lab files folder select the **clinical_reports.csv** file
+
+12. Select **Upload**
+
+### Exercise 5: Create Data base and tables
 
 1.  Switch back to **SSMS**. Right click on the **Databases** folder and select New database
     to Get patient case data into SQL Server.
@@ -255,7 +281,7 @@ VS Code.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image37.png)
 
-### Exercise 5: Import PatientNotes.csv 
+### Exercise 6: Import PatientNotes.csv 
 
 1 . Run below query to Enable required SQL Server 2025 features
 
@@ -276,7 +302,7 @@ GO
 
 ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
 
-### Exercise 6: Create external embedding model
+### Exercise 7: Create external embedding model
 
 1.  Run below query to Create master key (needed once per DB)
     
@@ -343,7 +369,7 @@ GO
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image42.png)
 
-### Exercise 7: Generate embeddings and store vectors
+### Exercise 8: Generate embeddings and store vectors
 
 1.  Run below command to create embeddings table (VECTOR column)
 
@@ -404,7 +430,7 @@ GO
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image47.png)
 
-### Exercise 8: Semantic case retrieval (doctor symptom query)
+### Exercise 9: Semantic case retrieval (doctor symptom query)
 
 This exercise helps you search for patient cases that are **similar in
 meaning** to a doctor's query, using vector embeddings.
@@ -570,7 +596,7 @@ meaning** to a doctor's query, using vector embeddings.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image52.png)
 
-### Exercise 9: Compare keyword vs semantic search
+### Exercise 10: Compare keyword vs semantic search
 
 1.  Run below queries and the count should match
 
@@ -637,6 +663,7 @@ meaning** to a doctor's query, using vector embeddings.
 ## Conclusion:
 
 This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
 
 
 
