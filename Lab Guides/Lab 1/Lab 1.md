@@ -596,8 +596,8 @@ meaning** to a doctor's query, using vector embeddings.
 1.  Run below queries and the count should match
 
     ```
-    SELECT COUNT(\*) FROM dbo.PatientNotes;
-    SELECT COUNT(\*) FROM dbo.PatientEmbeddings;
+    SELECT COUNT(*) FROM dbo.PatientNotes;
+    SELECT COUNT(*) FROM dbo.PatientEmbeddings;
     ```
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image53.png)
@@ -658,4 +658,5 @@ meaning** to a doctor's query, using vector embeddings.
 ## Conclusion:
 
 This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
 
